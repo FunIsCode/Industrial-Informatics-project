@@ -1,0 +1,374 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:sn="http://www.ontologies.com/G7_fastory.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://www.ontologies.com/G7_fastory.owl"/>
+  <owl:Class rdf:about="http://www.ontologies.com/G7_fastory.owl#Conveyor">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.ontologies.com/G7_fastory.owl#Equipment"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ontologies.com/G7_fastory.owl#Unload">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.ontologies.com/G7_fastory.owl#Process"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ontologies.com/G7_fastory.owl#Process">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ontologies.com/G7_fastory.owl#Station">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.ontologies.com/G7_fastory.owl#Equipment"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ontologies.com/G7_fastory.owl#Draw">
+    <rdfs:subClassOf rdf:resource="http://www.ontologies.com/G7_fastory.owl#Process"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ontologies.com/G7_fastory.owl#ChangePen">
+    <rdfs:subClassOf rdf:resource="http://www.ontologies.com/G7_fastory.owl#Process"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ontologies.com/G7_fastory.owl#Product">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ontologies.com/G7_fastory.owl#Load">
+    <rdfs:subClassOf rdf:resource="http://www.ontologies.com/G7_fastory.owl#Process"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ontologies.com/G7_fastory.owl#Cellphone">
+    <rdfs:subClassOf rdf:resource="http://www.ontologies.com/G7_fastory.owl#Product"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ontologies.com/G7_fastory.owl#WorkStation">
+    <rdfs:subClassOf rdf:resource="http://www.ontologies.com/G7_fastory.owl#Station"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ontologies.com/G7_fastory.owl#Equipment">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ontologies.com/G7_fastory.owl#Pen">
+    <rdfs:subClassOf rdf:resource="http://www.ontologies.com/G7_fastory.owl#Equipment"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ontologies.com/G7_fastory.owl#Transport">
+    <rdfs:subClassOf rdf:resource="http://www.ontologies.com/G7_fastory.owl#Process"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ontologies.com/G7_fastory.owl#LoadingStation">
+    <rdfs:subClassOf rdf:resource="http://www.ontologies.com/G7_fastory.owl#Station"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ontologies.com/G7_fastory.owl#ManualStation">
+    <rdfs:subClassOf rdf:resource="http://www.ontologies.com/G7_fastory.owl#Station"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ontologies.com/G7_fastory.owl#Robot">
+    <rdfs:subClassOf rdf:resource="http://www.ontologies.com/G7_fastory.owl#Equipment"/>
+  </owl:Class>
+  <rdf:Property rdf:about="http://www.ontologies.com/G7_fastory.owl#hasCapability">
+    <rdfs:range rdf:resource="http://www.ontologies.com/G7_fastory.owl#Process"/>
+    <rdfs:domain rdf:resource="http://www.ontologies.com/G7_fastory.owl#Equipment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.ontologies.com/G7_fastory.owl#isEquipped">
+    <rdfs:domain rdf:resource="http://www.ontologies.com/G7_fastory.owl#Pen"/>
+    <rdfs:range rdf:resource="http://www.ontologies.com/G7_fastory.owl#Robot"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.ontologies.com/G7_fastory.owl#hasNeeds">
+    <rdfs:domain rdf:resource="http://www.ontologies.com/G7_fastory.owl#Cellphone"/>
+    <rdfs:range rdf:resource="http://www.ontologies.com/G7_fastory.owl#Cellphone"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.ontologies.com/G7_fastory.owl#isOccupied">
+    <rdfs:domain rdf:resource="http://www.ontologies.com/G7_fastory.owl#Conveyor"/>
+    <rdfs:range rdf:resource="http://www.ontologies.com/G7_fastory.owl#Conveyor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.ontologies.com/G7_fastory.owl#hasColour">
+    <rdfs:domain rdf:resource="http://www.ontologies.com/G7_fastory.owl#Pen"/>
+    <rdfs:range rdf:resource="http://www.ontologies.com/G7_fastory.owl#Pen"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.ontologies.com/G7_fastory.owl#hasUrl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.ontologies.com/G7_fastory.owl#hasNeighbour">
+    <rdfs:domain rdf:resource="http://www.ontologies.com/G7_fastory.owl#Equipment"/>
+    <rdfs:range rdf:resource="http://www.ontologies.com/G7_fastory.owl#Equipment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.ontologies.com/G7_fastory.owl#hasLocation">
+    <rdfs:domain rdf:resource="http://www.ontologies.com/G7_fastory.owl#Cellphone"/>
+    <rdfs:range rdf:resource="http://www.ontologies.com/G7_fastory.owl#Conveyor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.ontologies.com/G7_fastory.owl#hasObject">
+    <rdfs:range rdf:resource="http://www.ontologies.com/G7_fastory.owl#Station"/>
+    <rdfs:domain rdf:resource="http://www.ontologies.com/G7_fastory.owl#Station"/>
+    <rdfs:range rdf:resource="http://www.ontologies.com/G7_fastory.owl#Conveyor"/>
+    <rdfs:range rdf:resource="http://www.ontologies.com/G7_fastory.owl#Pen"/>
+    <rdfs:range rdf:resource="http://www.ontologies.com/G7_fastory.owl#Robot"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Property>
+  <sn:Pen rdf:about="http://www.ontologies.com/G7_fastory.owl#pen_blue"/>
+  <sn:Pen rdf:about="http://www.ontologies.com/G7_fastory.owl#pen_red"/>
+  <sn:ChangePen rdf:about="http://www.ontologies.com/G7_fastory.owl#changePen_red"/>
+  <sn:Cellphone rdf:about="http://www.ontologies.com/G7_fastory.owl#cellphone_1"/>
+  <sn:ChangePen rdf:about="http://www.ontologies.com/G7_fastory.owl#changePen_green"/>
+  <sn:Pen rdf:about="http://www.ontologies.com/G7_fastory.owl#pen_green"/>
+  <sn:Station rdf:about="http://www.ontologies.com/G7_fastory.owl#manualStation">
+    <sn:hasObject>
+      <sn:ManualStation rdf:about="http://www.ontologies.com/G7_fastory.owl#manualStation_1">
+        <sn:hasObject>
+          <sn:Conveyor rdf:about="http://www.ontologies.com/G7_fastory.owl#conveyor_2">
+            <sn:hasNeighbour>
+              <sn:Conveyor rdf:about="http://www.ontologies.com/G7_fastory.owl#conveyor_3">
+                <sn:hasNeighbour>
+                  <sn:Conveyor rdf:about="http://www.ontologies.com/G7_fastory.owl#conveyor_5"/>
+                </sn:hasNeighbour>
+                <sn:hasCapability>
+                  <sn:Transport rdf:about="http://www.ontologies.com/G7_fastory.owl#transport_3_5"/>
+                </sn:hasCapability>
+              </sn:Conveyor>
+            </sn:hasNeighbour>
+            <sn:hasCapability>
+              <sn:Transport rdf:about="http://www.ontologies.com/G7_fastory.owl#transport_2_3"/>
+            </sn:hasCapability>
+          </sn:Conveyor>
+        </sn:hasObject>
+        <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_3"/>
+        <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_5"/>
+        <sn:hasNeighbour>
+          <sn:WorkStation rdf:about="http://www.ontologies.com/G7_fastory.owl#workStation_8">
+            <sn:hasNeighbour>
+              <sn:WorkStation rdf:about="http://www.ontologies.com/G7_fastory.owl#workStation_9">
+                <sn:hasNeighbour>
+                  <sn:WorkStation rdf:about="http://www.ontologies.com/G7_fastory.owl#workStation_10">
+                    <sn:hasNeighbour>
+                      <sn:WorkStation rdf:about="http://www.ontologies.com/G7_fastory.owl#workStation_11">
+                        <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_5"/>
+                        <sn:hasObject>
+                          <sn:Conveyor rdf:about="http://www.ontologies.com/G7_fastory.owl#conveyor_4">
+                            <sn:hasNeighbour rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_5"/>
+                            <sn:hasCapability>
+                              <sn:Transport rdf:about="http://www.ontologies.com/G7_fastory.owl#transport_4_5"/>
+                            </sn:hasCapability>
+                          </sn:Conveyor>
+                        </sn:hasObject>
+                        <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_3"/>
+                        <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_2"/>
+                        <sn:hasObject>
+                          <sn:Conveyor rdf:about="http://www.ontologies.com/G7_fastory.owl#conveyor_1">
+                            <sn:hasNeighbour rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_2"/>
+                            <sn:hasNeighbour rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_4"/>
+                            <sn:hasCapability>
+                              <sn:Transport rdf:about="http://www.ontologies.com/G7_fastory.owl#transport_1_2"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Transport rdf:about="http://www.ontologies.com/G7_fastory.owl#transport_1_4"/>
+                            </sn:hasCapability>
+                          </sn:Conveyor>
+                        </sn:hasObject>
+                        <sn:hasObject>
+                          <sn:Robot rdf:about="http://www.ontologies.com/G7_fastory.owl#robot_1">
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_f2_blue"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_k2_blue"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_s1_green"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_f2_green"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_k1_blue"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_s3_blue"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_k3_red"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_k2_green"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_f1_red"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Load rdf:about="http://www.ontologies.com/G7_fastory.owl#load_1"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_s2_red"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_f3_red"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_s1_blue"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_f1_green"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_f3_green"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_f1_blue"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_f2_red"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_f3_blue"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_k3_green"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_s2_blue"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_s2_green"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_k1_green"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_s3_green"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_k2_red"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Unload rdf:about="http://www.ontologies.com/G7_fastory.owl#unload_1"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_k1_red"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_s1_red"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_s3_red"/>
+                            </sn:hasCapability>
+                            <sn:hasCapability>
+                              <sn:Draw rdf:about="http://www.ontologies.com/G7_fastory.owl#draw_k3_blue"/>
+                            </sn:hasCapability>
+                          </sn:Robot>
+                        </sn:hasObject>
+                        <sn:hasNeighbour>
+                          <sn:WorkStation rdf:about="http://www.ontologies.com/G7_fastory.owl#workStation_12">
+                            <sn:hasNeighbour>
+                              <sn:LoadingStation rdf:about="http://www.ontologies.com/G7_fastory.owl#loadingStation_1">
+                                <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_1"/>
+                                <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_2"/>
+                                <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_3"/>
+                                <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_5"/>
+                                <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#robot_1"/>
+                                <sn:hasNeighbour>
+                                  <sn:WorkStation rdf:about="http://www.ontologies.com/G7_fastory.owl#workStation_2">
+                                    <sn:hasNeighbour>
+                                      <sn:WorkStation rdf:about="http://www.ontologies.com/G7_fastory.owl#workStation_3">
+                                        <sn:hasNeighbour>
+                                          <sn:WorkStation rdf:about="http://www.ontologies.com/G7_fastory.owl#workStation_4">
+                                            <sn:hasNeighbour>
+                                              <sn:WorkStation rdf:about="http://www.ontologies.com/G7_fastory.owl#workStation_5">
+                                                <sn:hasNeighbour>
+                                                  <sn:WorkStation rdf:about="http://www.ontologies.com/G7_fastory.owl#workStation_6">
+                                                    <sn:hasNeighbour rdf:resource="http://www.ontologies.com/G7_fastory.owl#manualStation_1"/>
+                                                    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_1"/>
+                                                    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_2"/>
+                                                    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_3"/>
+                                                    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_4"/>
+                                                    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_5"/>
+                                                    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#robot_1"/>
+                                                  </sn:WorkStation>
+                                                </sn:hasNeighbour>
+                                                <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_1"/>
+                                                <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_2"/>
+                                                <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_3"/>
+                                                <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_4"/>
+                                                <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_5"/>
+                                                <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#robot_1"/>
+                                              </sn:WorkStation>
+                                            </sn:hasNeighbour>
+                                            <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_1"/>
+                                            <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_2"/>
+                                            <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_3"/>
+                                            <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_4"/>
+                                            <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_5"/>
+                                            <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#robot_1"/>
+                                          </sn:WorkStation>
+                                        </sn:hasNeighbour>
+                                        <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_1"/>
+                                        <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_2"/>
+                                        <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_3"/>
+                                        <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_4"/>
+                                        <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_5"/>
+                                        <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#robot_1"/>
+                                      </sn:WorkStation>
+                                    </sn:hasNeighbour>
+                                    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_1"/>
+                                    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_2"/>
+                                    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_3"/>
+                                    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_4"/>
+                                    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_5"/>
+                                    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#robot_1"/>
+                                  </sn:WorkStation>
+                                </sn:hasNeighbour>
+                              </sn:LoadingStation>
+                            </sn:hasNeighbour>
+                            <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_1"/>
+                            <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_2"/>
+                            <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_3"/>
+                            <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_4"/>
+                            <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_5"/>
+                            <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#robot_1"/>
+                          </sn:WorkStation>
+                        </sn:hasNeighbour>
+                      </sn:WorkStation>
+                    </sn:hasNeighbour>
+                    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_1"/>
+                    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_2"/>
+                    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_3"/>
+                    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_4"/>
+                    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_5"/>
+                    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#robot_1"/>
+                  </sn:WorkStation>
+                </sn:hasNeighbour>
+                <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_1"/>
+                <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_2"/>
+                <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_3"/>
+                <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_4"/>
+                <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_5"/>
+                <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#robot_1"/>
+              </sn:WorkStation>
+            </sn:hasNeighbour>
+            <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_1"/>
+            <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_2"/>
+            <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_3"/>
+            <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_4"/>
+            <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#conveyor_5"/>
+            <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#robot_1"/>
+          </sn:WorkStation>
+        </sn:hasNeighbour>
+      </sn:ManualStation>
+    </sn:hasObject>
+  </sn:Station>
+  <sn:Station rdf:about="http://www.ontologies.com/G7_fastory.owl#loadingStation">
+    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#loadingStation_1"/>
+  </sn:Station>
+  <sn:Station rdf:about="http://www.ontologies.com/G7_fastory.owl#workStation">
+    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#workStation_8"/>
+    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#workStation_9"/>
+    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#workStation_3"/>
+    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#workStation_11"/>
+    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#workStation_5"/>
+    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#workStation_2"/>
+    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#workStation_4"/>
+    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#workStation_10"/>
+    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#workStation_12"/>
+    <sn:hasObject rdf:resource="http://www.ontologies.com/G7_fastory.owl#workStation_6"/>
+  </sn:Station>
+  <sn:ChangePen rdf:about="http://www.ontologies.com/G7_fastory.owl#changePen_blue"/>
+</rdf:RDF>

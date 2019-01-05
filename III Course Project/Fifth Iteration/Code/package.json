@@ -1,0 +1,26 @@
+{
+  "name": "iii_project",
+  "version": "1.0.0",
+  "description": "Course project",
+  "main": "pro1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "iii"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.15.5",
+    "formidable": "^1.1.1",
+    "fs": "0.0.1-security",
+    "modules": "^0.4.0",
+    "node-rest-client": "^3.1.0",
+    "request": "^2.82.0",
+    "require": "^2.4.20",
+    "socket.io": "^2.0.3"
+  }
+}

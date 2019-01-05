@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:iii="http://fast.tut.fi/iii2016/Factory#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://www.ontologies.com/Ontology6032.owl"/>
+  <owl:Class rdf:about="http://fast.tut.fi/iii2016/Factory#Line">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://fast.tut.fi/iii2016/Factory#Factory"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://fast.tut.fi/iii2016/Factory#Factory">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://fast.tut.fi/iii2016/Factory#Service">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://fast.tut.fi/iii2016/Factory#Equipment"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://fast.tut.fi/iii2016/Factory#Equipment">
+    <rdfs:subClassOf rdf:resource="http://fast.tut.fi/iii2016/Factory#Line"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://fast.tut.fi/iii2016/Factory#hasService">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://fast.tut.fi/iii2016/Factory#hasNeighbour">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <rdf:Property rdf:about="http://fast.tut.fi/iii2016/Factory#hasEquipment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://fast.tut.fi/iii2016/Factory#hasLine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Property>
+  <owl:DatatypeProperty rdf:about="http://fast.tut.fi/iii2016/Factory#hasURL">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://fast.tut.fi/iii2016/Factory#hasAmount">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://fast.tut.fi/iii2016/Factory#hasServiceID">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://fast.tut.fi/iii2016/Factory#hasServiceUrl">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://fast.tut.fi/iii2016/Factory#hasPayload">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <iii:Equipment rdf:about="http://fast.tut.fi/iii2016/Factory#order">
+    <iii:hasAmount>3</iii:hasAmount>
+  </iii:Equipment>
+  <iii:Factory rdf:about="http://fast.tut.fi/iii2016/Factory#factory_1">
+    <iii:hasLine>
+      <iii:Line rdf:about="http://fast.tut.fi/iii2016/Factory#line_1">
+        <iii:hasEquipment>
+          <iii:Equipment rdf:about="http://fast.tut.fi/iii2016/Factory#rob_1">
+            <iii:hasService>
+              <iii:Service rdf:about="http://fast.tut.fi/iii2016/Factory#doScreen_2">
+                <iii:hasServiceUrl>http://192.168.6.1/rest/services/Draw5</iii:hasServiceUrl>
+                <iii:hasServiceID>draw_5</iii:hasServiceID>
+              </iii:Service>
+            </iii:hasService>
+            <iii:hasService>
+              <iii:Service rdf:about="http://fast.tut.fi/iii2016/Factory#doKeyboard_2">
+                <iii:hasServiceID>http://192.168.6.1/rest/services/Draw8</iii:hasServiceID>
+                <iii:hasServiceID>draw_8</iii:hasServiceID>
+              </iii:Service>
+            </iii:hasService>
+            <iii:hasService>
+              <iii:Service rdf:about="http://fast.tut.fi/iii2016/Factory#doFrame_1">
+                <iii:hasServiceUrl>http://192.168.9.1/rest/services/Draw1</iii:hasServiceUrl>
+                <iii:hasServiceID>Draw_1</iii:hasServiceID>
+              </iii:Service>
+            </iii:hasService>
+            <iii:hasService>
+              <iii:Service rdf:about="http://fast.tut.fi/iii2016/Factory#doFrame_2">
+                <iii:hasServiceUrl>http://192.168.6.1/rest/services/Draw2</iii:hasServiceUrl>
+                <iii:hasServiceID>draw_2</iii:hasServiceID>
+              </iii:Service>
+            </iii:hasService>
+            <iii:hasService>
+              <iii:Service rdf:about="http://fast.tut.fi/iii2016/Factory#doKeyboard_3">
+                <iii:hasServiceUrl>http://192.168.6.1/rest/services/Draw9</iii:hasServiceUrl>
+                <iii:hasServiceID>draw_9</iii:hasServiceID>
+              </iii:Service>
+            </iii:hasService>
+            <iii:hasService>
+              <iii:Service rdf:about="http://fast.tut.fi/iii2016/Factory#doFrame_3">
+                <iii:hasServiceUrl>http://192.168.6.1/rest/services/Draw3</iii:hasServiceUrl>
+                <iii:hasServiceID>draw_3</iii:hasServiceID>
+              </iii:Service>
+            </iii:hasService>
+            <iii:hasService>
+              <iii:Service rdf:about="http://fast.tut.fi/iii2016/Factory#doScreen_3">
+                <iii:hasServiceUrl>http://192.168.6.1/rest/services/Draw6</iii:hasServiceUrl>
+                <iii:hasServiceID>draw_6</iii:hasServiceID>
+              </iii:Service>
+            </iii:hasService>
+            <iii:hasService>
+              <iii:Service rdf:about="http://fast.tut.fi/iii2016/Factory#doKeyboard_1">
+                <iii:hasServiceUrl>http://192.168.9.1/rest/services/Draw7</iii:hasServiceUrl>
+                <iii:hasServiceID>draw_7</iii:hasServiceID>
+              </iii:Service>
+            </iii:hasService>
+            <iii:hasService>
+              <iii:Service rdf:about="http://fast.tut.fi/iii2016/Factory#doScreen_1">
+                <iii:hasServiceUrl>http://192.168.9.1/rest/services/Draw4</iii:hasServiceUrl>
+                <iii:hasServiceID>draw_4</iii:hasServiceID>
+              </iii:Service>
+            </iii:hasService>
+            <iii:hasService>
+              <iii:Service rdf:about="http://fast.tut.fi/iii2016/Factory#changeColor">
+                <iii:hasServiceID>Blue</iii:hasServiceID>
+                <iii:hasServiceUrl>http://192.168.9.1/rest/services/ChangePenBLUE</iii:hasServiceUrl>
+              </iii:Service>
+            </iii:hasService>
+          </iii:Equipment>
+        </iii:hasEquipment>
+        <iii:hasEquipment>
+          <iii:Equipment rdf:about="http://fast.tut.fi/iii2016/Factory#cnv_1">
+            <iii:hasNeighbour>
+              <iii:Equipment rdf:about="http://fast.tut.fi/iii2016/Factory#cnv_2">
+                <iii:hasURL>http://192.168.9.2/rest/services/TransZone23</iii:hasURL>
+                <iii:hasPayload></iii:hasPayload>
+                <iii:hasNeighbour>
+                  <iii:Equipment rdf:about="http://fast.tut.fi/iii2016/Factory#cnv_3">
+                    <iii:hasURL>http://192.168.9.2/rest/services/TransZone35</iii:hasURL>
+                    <iii:hasPayload></iii:hasPayload>
+                    <iii:hasNeighbour>
+                      <iii:Equipment rdf:about="http://fast.tut.fi/iii2016/Factory#cnv_5"/>
+                    </iii:hasNeighbour>
+                  </iii:Equipment>
+                </iii:hasNeighbour>
+              </iii:Equipment>
+            </iii:hasNeighbour>
+            <iii:hasURL>http://192.168.9.2/rest/services/TransZone12</iii:hasURL>
+            <iii:hasPayload></iii:hasPayload>
+          </iii:Equipment>
+        </iii:hasEquipment>
+        <iii:hasEquipment rdf:resource="http://fast.tut.fi/iii2016/Factory#cnv_2"/>
+        <iii:hasEquipment rdf:resource="http://fast.tut.fi/iii2016/Factory#cnv_3"/>
+        <iii:hasEquipment>
+          <iii:Equipment rdf:about="http://fast.tut.fi/iii2016/Factory#cnv_4">
+            <iii:hasNeighbour rdf:resource="http://fast.tut.fi/iii2016/Factory#cnv_5"/>
+            <iii:hasURL>http://192.168.9.2/rest/services/TransZone45</iii:hasURL>
+            <iii:hasPayload></iii:hasPayload>
+          </iii:Equipment>
+        </iii:hasEquipment>
+        <iii:hasEquipment rdf:resource="http://fast.tut.fi/iii2016/Factory#cnv_5"/>
+      </iii:Line>
+    </iii:hasLine>
+  </iii:Factory>
+</rdf:RDF>

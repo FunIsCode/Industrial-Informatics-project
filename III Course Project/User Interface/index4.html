@@ -1,0 +1,126 @@
+<html>
+<link rel="stylesheet" href="assets/style.css" type="text/css">
+<link rel="stylesheet" href="assets/animate.css" type="text/css">
+
+<head>
+ <meta charset="UTF-8">
+ <title>Workcell Controller</title>
+ <script src="jquery.min.js"></script>
+ <script src="invokerCntr.js"></script>
+ <script src="d3.js"></script>
+ <script src="js/d3.js"></script>
+ <script src="js/animation.js"></script>
+ <script src="http://127.0.0.1:3000/socket.io/socket.io.js"></script>
+ <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+</head>
+<body bgcolor="#E6E6FA">
+
+<div style="background-color: #5ca3f7; width:2100px ;height:70px;text-align: center;">
+ <img class="jello animated" src="assets/img/logo.png" alt="Logo" style="width:400px;height:70px;float: left;margin-right: 3.5cm;">
+ <h3 style="font-family:Verdana;font-size:150%;color:#ffffff;height:100%;float:left;margin-left:auto;margin-top: 0.5em;margin-bottom: 0em;align:justify">III Assignmnet</h3>
+</div>
+
+<div id="space_top">
+
+ <div style="width : 15% ; float:left" class="animatedd bouncee">
+  <h2 class="fadeInLeft animated">Group 15 </h2>
+  <h4 class="bounceInLeft animated">Farid Khosravi </h4>
+  <h4 class="bounceInLeft animated">Palash Halder </h4>
+  <h4 class="bounceInLeft animated">Mehdi Mahmoodpour </h4>
+ </div>
+
+ <div  >
+  <div  style="margin-top: 5%" class="bounceInUp animated" id="border">
+   <button type="button" id="Red" onclick="javascript:RED()">Red</button><br>
+   <button type="button" id="F1" onclick="javascript:F1()">F1</button><br>
+   <button type="button" id="S1" onclick="javascript:S1()">S1</button><br>
+   <button type="button" id="K1" onclick="javascript:K1()">K1</button><br>
+   <button onclick="addpallet()">Insert Pallet</button><br>
+
+  </div>
+  <div style="margin-top: 5%" class="bounceInUp animated" id="border">
+   <button type="button" id="Green" onclick="javascript:GREEN()">Green</button><br>
+   <button type="button" id="F2" onclick="javascript:F2()">F2</button><br>
+   <button type="button" id="S2" onclick="javascript:S2()">S2</button><br>
+   <button type="button" id="K2" onclick="javascript:K2()">K2</button><br>
+   <button onclick="ejectpallet()">Eject Pallet</button><br>
+
+  </div>
+  <div style="margin-top: 5%" class="bounceInUp animated" id="border">
+   <button type="button" id="Blue" onclick="javascript:BLUE()">Blue</button><br>
+   <button type="button" id="F3" onclick="javascript:F3()">F3</button><br>
+   <button type="button" id="S3" onclick="javascript:S3()">S3</button><br>
+   <button type="button" id="K3" onclick="javascript:K3()">K3</button><br>
+   <button onclick="startProcess()">Start Process</button><br>
+  </div>
+ </div>
+
+ <div style="width : 38%; float:left;" class="rubberBand animated" id="cell"  align="center">
+  <svg style="padding:16px;" width="500" height="500" >
+   <!--Workcell-->
+   <polyline points="440,60 420,60 360,0 200,0 140,60 190,60 210,40 350,40 370,60 420,60 120,60" style="fill: #d8cfe1;stroke:#ff0000;stroke-width:1" />
+   <line x1="440" y1="100" x2="120" y2="100" style="stroke:#ff0000;stroke-width:1"/>
+   <rect x="200" y="100" width="160" height="160" style="fill:#590909;stroke:#ff0000;stroke-width:1;fill-opacity:0.1;stroke-opacity:0.9 "/>
+   <!--Robot-->
+   <line x1="280" y1="180" x2="225" y2="155" style="stroke:rgb(255,119,49);stroke-width:10 "/>
+   <line x1="225" y1="155" x2="280" y2="130" style="stroke:rgb(255,119,49);stroke-width:10 "/>
+   <circle cx="280" cy="180" r="5" style="fill:orange " stroke="black" stroke-width="3"/>
+   <circle cx="225" cy="155" r="5" style="fill:orange " stroke="black" stroke-width="3"/>
+   <circle cx="280" cy="130" r="5" style="fill:orange " stroke="black" stroke-width="3"/>
+   <!-- Sensors-->
+   <circle id="WS_Sensor1" cx="430" cy="50" r="6"  style="fill:#843e25 " />
+   <circle id="WS_Sensor2" cx="325" cy="50" r="6" style="fill:#843e25"/>
+   <circle id="WS_Sensor3" cx="280" cy="50" r="6" style="fill:#843e25"/>
+   <circle id="WS_Sensor4" cx="240" cy="-10" r="6" style="fill:#843e25"/>
+   <circle id="WS_Sensor1" cx="128" cy="50" r="6"  style="fill:#843e25 " />
+   <rect id="WS_RFSensor1" x = "422.5" y = "25" width="15" height="15" style="fill:##843e25"/>
+   <rect id="WS_RFSensor2" x = "120.5" y = "25" width="15" height="15" style="fill:##843e25"/>
+
+   <!-- Stoppers -->
+   <polygon id="WS_Stopper1" points="430,100 435,110 425,110"   style="fill:#ff4400;stroke:#ff0000;stroke-width:1"/>
+   <polygon id="WS_Stopper2" points="325,100 320,110 330,110"  style="fill:#ff4400;stroke:#ff0000;stroke-width:1"/>
+   <polygon id="WS_Stopper3" points="280,100 285 110 275,110"  style="fill:#ff4400;stroke:#ff0000;stroke-width:1"/>
+   <polygon id="WS_Stopper4" points="240,40 235,50 245, 50"    style="fill:#ff4400;stroke:#ff0000;stroke-width:1"/>
+   <!-- Pallet -->
+   <g class="PalletAdd" transform="translate(417 67)" width="26" height="25" >
+    <rect  x = "0" y = "0" width="26" height="25" style="fill:#000000" />
+   </g>
+  </svg>
+ </div>
+
+<br><br><br><br><br>
+
+ <div >
+  <table>
+   <tr>
+    <td> <label for="txtPayload">Set Amount:</label></td>
+    <td><textarea cols="20" rows="1" id="txtPayload"></textarea></td>
+   </tr>
+  </table><br>
+
+  <div style="margin-left: 5%">
+   <input type="button" id="submit" value="Submit" style=" margin-left: 10%;">
+  </div>
+</div>
+
+<script>
+            var socket = io('http://127.0.0.1:3000');
+            function addpallet() {
+                add_pallet()
+                socket.emit('add_pallet')
+			  
+	    }
+</script>
+
+<script>
+            var socket = io();
+            function startProcess() {
+                move_pallet12()
+                socket.emit('move_pallet12')
+	    }
+</script>
+
+</div>
+
+</body>
+</html>
